@@ -4,7 +4,7 @@ import Image from 'next/image'
 export const Card = ({ image, title, description }) => {
   return (
     <div>
-      <div className='bg-white rounded shadow-lg overflow-hidden p-2'>
+      <div className='bg-white rounded shadow-lg overflow-hidden p-5 fade-in'>
         <Image 
           src={image}
           width={600}

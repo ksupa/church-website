@@ -1,14 +1,14 @@
 import "./globals.css";
 import { NavBar } from "./components/ui/NavBar";
 import { Contact } from "./components/Contact";
-import { Inter, Sen } from "next/font/google";  
+import { Montserrat , Karla } from "next/font/google";  
 
-const inter = Inter({
+const montserrat = Montserrat({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: '--font-montserrat'
 });
 
-const sen = Sen({
+const karla = Karla({
   subsets: ["latin"],
 })
 
@@ -20,7 +20,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.variable} ${sen.className} antialiased min-h-screen`} >
+      <body className={`${montserrat.variable} ${karla.className} antialiased min-h-screen`} >
         <NavBar />
 
         <main>

@@ -38,7 +38,7 @@ export default function Home() {
         
         {/* Hero Content */}
         <div className="relative text-center text-white px-4">
-          <h1 className="text-6xl md:text-8xl font-bold mb-4 heading-text">
+          <h1 className="text-6xl md:text-8xl font-bold mb-4 ">
             FBCFI Edmonton
           </h1>
           <p className="text-lg md:text-xl lg:text-3xl max-w-2xl mx-auto">
@@ -51,12 +51,13 @@ export default function Home() {
       {/* Values */}
       <section id="values" className="py-10 md:py-20 bg-gray-100">
         <div className="max-w-7xl mx-auto pb-10 mb-10 grid md:grid-cols-2 gap-10">
-          <div className="px-5">
-            <h2 className="font-semibold text-3xl md:text-4xl lg:text-6xl pb-5 text-green-800 heading-text">Our Mission</h2>
+          <div className="px-5 flex flex-col h-full justify-between fade-in">
             <div>
+              <h2 className="font-semibold text-3xl md:text-4xl lg:text-6xl pb-5 text-green-900 ">Our Mission</h2>
               <p className="text-black text-lg md:text-xl">
                 FBCFI is mandated to organize preachings, teachings, crusades, Gospel concerts and various ministries to plant churches and train leaders and workers to serve and build the Kingdom of God.
               </p>
+            </div>
               <Image
                 src={missionImg}
                 alt="Woman at church with her hand raised"
@@ -64,14 +65,14 @@ export default function Home() {
                 width={1200}
                 height={800}
               />
-            </div>
           </div>
-          <div className="px-5"> 
-            <h2 className="font-semibold text-3xl md:text-4xl lg:text-6xl pb-5 text-green-800 heading-text">Our Vision</h2>
+          <div className="px-5 flex flex-col h-full justify-between fade-in"> 
             <div>
+              <h2 className="font-semibold text-3xl md:text-4xl lg:text-6xl pb-5 text-green-900 ">Our Vision</h2>
               <p className="text-black text-lg md:text-xl">
                 FBCFI envision to proclaim, promote and advocate the full Gospel of Jesus Christ throughout the Philippines and Overseas by whatever means, form or manner in accordance with the Word of God and leading of the Holy Spirit.
               </p>
+            </div>
               <Image
                 src="https://placehold.net/600x400.png"
                 width={1200}
@@ -79,12 +80,11 @@ export default function Home() {
                 alt="Placeholder image"
                 className="mt-10 rounded-lg shadow-lg"
               />
-            </div>
           </div>
         </div>
 
         <Link
-          className='cursor-pointer border-2 border-green-800 bg-transparent hover:bg-green-800 text-xl text-green-800 hover:text-white font-semibold text-center py-5 w-100 rounded-full mx-auto block'
+          className='cursor-pointer border-2 border-green-800 bg-transparent hover:bg-green-800 text-xl text-green-800 hover:text-white font-semibold text-center py-5 w-50 md:w-100 rounded-full mx-auto block'
           href="https://freebelieversinchrist.org/our-values"
           target='_blank'
         >
