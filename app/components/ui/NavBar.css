@@ -1,13 +1,70 @@
 .navbar {
-    position: fixed;
-    width: 100%;
-    z-index: 10;
-    background-color: transparent;
-    font-weight: 600;
-    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  background-color: transparent;
+  font-weight: 600;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+  --nav-text-color: white;
+  --nav-hover-color: #5fc084;
+  --nav-border-color: white;
+  --nav-border-hover-color: #4e9e6d;
+  --nav-bg-hover-color: #4e9e6d;
 }
 
 .active {
-    background-color: #0d542b;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: #0d542b;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  --nav-text-color: white;
+  --nav-hover-color: #22c55e;
+  --nav-border-color: white;
+  --nav-border-hover-color: #22c55e;
+  --nav-bg-hover-color: #22c55e;
+}
+
+.navbar .nav-text {
+  color: var(--nav-text-color);
+}
+
+.navbar .nav-text:hover {
+  color: var(--nav-hover-color);
+}
+
+.navbar .nav-button {
+  color: var(--nav-text-color);
+  border-color: var(--nav-border-color);
+  background-color: transparent;
+}
+
+.navbar .nav-button:hover {
+  color: var(--nav-text-color);
+  border-color: var(--nav-border-hover-color);
+  background-color: var(--nav-bg-hover-color);
+}
+
+/* Mobile Nav */
+.menu-line {
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+  border-radius: 20px;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.mobile-menu {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.60);
+  backdrop-filter: blur(8px);
+  top: 0;
 }

@@ -11,6 +11,17 @@ export const NavBar = () => {
   const pathname = usePathname();
   const isHomePage = pathname == '/';
   const [navBar, setNavBar] = useState(false);
+  const [openHamburgerNav, setOpenHamburgerNav] = useState(false);
+
+  const toggleHamburgerNav = () => {
+    setOpenHamburgerNav(!openHamburgerNav)
+
+    if(!openHamburgerNav) {
+      document.body.classList.add('no-scroll')
+    } else {
+      document.body.classList.remove('no-scroll')
+    }
+  }
 
   useEffect(() => {
     const addBackground = () => {
@@ -33,29 +44,60 @@ export const NavBar = () => {
       <nav className={navBar ? 'navbar active' : 'navbar'}>
           <div className="max-w-7xl mx-auto px-8 py-6 flex justify-between items-center">
             {/* FBCFI Edmonton or FBCFI Logo */}
-              <Link href="/" className="text-white text-xl hover:text-green-800">
+              <Link href="/" className="text-xl nav-text">
                 FBCFI Edmonton
               </Link>
 
             {/* Nav Links */}
-              <ul className="flex gap-4 text-white text-base tracking-[6]">
+              <ul className="gap-4 text-base tracking-[6] hidden lg:flex">
                   <li>
-                      <Link href={isHomePage ? "#home" : "/"} className="hover:text-green-800">Home</Link>
+                      <Link href={isHomePage ? "#home" : "/"} className="nav-text">Home</Link>
                   </li>
                   <li>
-                      <Link href={isHomePage ? "#values" : "/#values"} className="hover:text-green-800">Values</Link>
+                      <Link href={isHomePage ? "#values" : "/#values"} className="nav-text">Values</Link>
                   </li>
                   <li>
-                      <Link href="/about" className="hover:text-green-800">About</Link>
+                      <Link href="/about" className="nav-text">About</Link>
                   </li>
               </ul>
               <Link 
-                className='cursor-pointer border-2 hover:border-green-800 border-white bg-transparent hover:bg-green-800 text-white hover:text-white text-xl px-4 py-1 rounded-full'
+                className='hidden lg:flex nav-button cursor-pointer border-2 text-xl px-4 py-1 rounded-full transition-colors duration-300'
                 href="https://www.facebook.com/FBCFIEdmonton" 
                 target='_blank' 
                 >
                 Service
               </Link>
+
+              <div className='block lg:hidden z-100' onClick={toggleHamburgerNav}>
+                <div className='menu-line'></div>
+                <div className='menu-line'></div>
+                <div className='menu-line'></div>
+              </div>
+          </div>
+
+          {/* Mobile Menu */}
+          <div className={openHamburgerNav ? 'mobile-menu' : 'hidden'}>
+            <ul className='text-center p-5 text-3xl flex flex-col gap-7'>
+              <li className='p-3 border-b border-gray-300 w-50 mx-auto'>
+                <Link href={isHomePage ? "#home" : "/"} className="nav-text md:text-5xl" onClick={toggleHamburgerNav}>Home</Link>
+              </li>
+              <li className='p-3 border-b border-gray-300 w-50 mx-auto'>
+                <Link href={isHomePage ? "#values" : "/#values"} className="nav-text md:text-5xl" onClick={toggleHamburgerNav}>Values</Link>
+              </li>
+              <li className='p-3 border-b border-gray-300 w-50 mx-auto'>
+                <Link href="/about" className="nav-text md:text-5xl" onClick={toggleHamburgerNav}>About</Link>
+              </li>
+              <li className='mx-auto mt-10'>
+                <Link 
+                  className='nav-button cursor-pointer border-2 px-6 py-2 rounded-full transition-colors duration-300 text-3xl md:text-5xl'
+                  href="https://www.facebook.com/FBCFIEdmonton" 
+                  target='_blank' 
+                  onClick={toggleHamburgerNav}
+                >
+                  Service
+                </Link>
+              </li>
+            </ul>
           </div>
       </nav>
   )

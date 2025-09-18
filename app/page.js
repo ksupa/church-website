@@ -84,7 +84,7 @@ export default function Home() {
         </div>
 
         <Link
-          className='cursor-pointer border-2 border-green-800 bg-transparent hover:bg-green-800 text-xl text-green-800 hover:text-white font-semibold text-center py-5 w-50 md:w-100 rounded-full mx-auto block'
+          className='cursor-pointer border-2 border-green-800 bg-transparent hover:bg-green-800 text-xl text-green-800 hover:text-white font-semibold text-center py-5 w-50 md:w-100 rounded-full mx-auto block transition-colors duration-300'
           href="https://freebelieversinchrist.org/our-values"
           target='_blank'
         >
@@ -92,8 +92,9 @@ export default function Home() {
         </Link>
       </section>
 
+      {/* Events */}
       <section className="bg-gray-100 py-10 md:py-20">
-        <h2 className="font-semibold text-center text-5xl lg:text-6xl text-green-800">Upcoming Events</h2>
+        <h2 className="font-semibold text-center text-5xl lg:text-6xl text-green-800">Events</h2>
         <div className="max-w-7xl mx-auto px-5 py-10 grid md:grid-cols-3 gap-10">
           {events.map((event, index) => {
             return (
