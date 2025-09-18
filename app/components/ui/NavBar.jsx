@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import React from 'react'
 import { usePathname } from 'next/navigation'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './NavBar.css'
 
 
@@ -12,16 +12,22 @@ export const NavBar = () => {
   const isHomePage = pathname == '/';
   const [navBar, setNavBar] = useState(false);
 
-  const addBackground = () => {
-    if(window.scrollY >= 100) {
-      setNavBar(true)
+  useEffect(() => {
+    const addBackground = () => {
+      if(window.scrollY >= 100) {
+        setNavBar(true)
+      }
+      else {
+        setNavBar(false)
+      }
     }
-    else {
-      setNavBar(false)
-    }
-  }
 
-  window.addEventListener('scroll', addBackground)
+    window.addEventListener('scroll', addBackground)
+
+    return () => {
+      window.removeEventListener('scroll', addBackground)
+    }
+  }, [])
 
   return (
       <nav className={navBar ? 'navbar active' : 'navbar'}>

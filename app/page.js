@@ -42,7 +42,7 @@ export default function Home() {
             FBCFI Edmonton
           </h1>
           <p className="text-lg md:text-xl lg:text-3xl max-w-2xl mx-auto">
-            "Then you will know the truth, and the truth will set you free."<br /> 
+            &quot;Then you will know the truth, and the truth will set you free.&quot;<br /> 
             John 8:32
           </p>
         </div>
