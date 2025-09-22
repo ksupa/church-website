@@ -1,8 +1,9 @@
 import Image from "next/image";
-import banner from "../assets/banner.webp";
+import banner from "../assets/banner-img.webp";
 import missionImg from "../assets/mission-img.webp";
 import Link from "next/link";
 import { Card } from "./components/ui/Card";
+import { Hero } from "./components/Hero";
 
 const events = [
   {
@@ -25,28 +26,11 @@ const events = [
 export default function Home() {
   return (
     <>
-      <section id="home" className="relative h-screen flex items-center justify-center">
-        <Image
-          src={banner}
-          alt="FBCFI Edmonton church"
-          fill
-          className="object-cover"
-        />
-        
-        {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/30" />
-        
-        {/* Hero Content */}
-        <div className="relative text-center text-white px-4">
-          <h1 className="text-6xl md:text-8xl font-bold mb-4 ">
-            FBCFI Edmonton
-          </h1>
-          <p className="text-lg md:text-xl lg:text-3xl max-w-2xl mx-auto">
-            &quot;Then you will know the truth, and the truth will set you free.&quot;<br /> 
-            John 8:32
-          </p>
-        </div>
-      </section>
+      <Hero 
+        image={banner}
+        title="FBCFI Edmonton"
+        subTitle="&quot;Then you will know the truth, and the truth will set you free.&quot; John 8:32"
+      />
 
       {/* Values */}
       <section id="values" className="py-10 md:py-20 bg-gray-100">

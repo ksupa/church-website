@@ -1,9 +1,13 @@
 import React from "react";
+import { Hero } from "../components/Hero";
+import aboutBanner from "../../assets/about-img.webp";
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <h1 className="text-4xl font-bold">About Us</h1>
-    </div>
+    <Hero 
+      image={aboutBanner} 
+      title="About Us" 
+      subTitle='Coming Soon'
+    />
   );
 }
