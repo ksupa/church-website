@@ -4,24 +4,7 @@ import missionImg from "../assets/mission-img.webp";
 import Link from "next/link";
 import { Card } from "./components/ui/Card";
 import { Hero } from "./components/Hero";
-
-const events = [
-  {
-    image: 'https://placehold.co/600x400/png',
-    title: 'Event 1',
-    description: 'Description for Event 1',
-  },
-  {
-    image: 'https://placehold.co/600x400/png',
-    title: 'Event 2',
-    description: 'Description for Event 2',
-  },
-  {
-    image: 'https://placehold.co/600x400/png',
-    title: 'Event 3',
-    description: 'Description for Event 3',
-  }
-]
+import { events } from "./data/events";
 
 export default function Home() {
   return (
