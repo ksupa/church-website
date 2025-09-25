@@ -17,7 +17,7 @@ export default function Home() {
       />
 
       {/* Values */}
-      <section id='values' className='py-10 md:py-20 bg-gray-100'>
+      <section id='values' className='py-10 bg-gray-100'>
         <div className='max-w-7xl mx-auto pb-10 mb-10 grid md:grid-cols-2 gap-10'>
           <div className='px-5 flex flex-col h-full justify-between fade-in'>
             <div>
@@ -69,7 +69,7 @@ export default function Home() {
       </section>
 
       {/* Events */}
-      <section className='bg-gray-100 py-10 md:py-20'>
+      <section className='bg-gray-100 py-10 px-5'>
         <h2 className='font-semibold text-center text-5xl lg:text-6xl text-green-800'>
           Events
         </h2>

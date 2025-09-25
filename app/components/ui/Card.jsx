@@ -7,8 +7,8 @@ export const Card = ({ image, title, description, date }) => {
       <div className='bg-white rounded shadow-lg overflow-hidden p-5 fade-in h-full'>
         <Image
           src={image}
-          width={600}
-          height={400}
+          width={800}
+          height={600}
           alt='Event Image'
           className='rounded'
         />
