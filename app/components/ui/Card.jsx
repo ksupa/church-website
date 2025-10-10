@@ -4,7 +4,7 @@ import Image from "next/image";
 export const Card = ({ image, title, description, date }) => {
   return (
     <div>
-      <div className='bg-white rounded shadow-lg overflow-hidden p-5 fade-in h-full'>
+      <div className='bg-white rounded shadow-lg overflow-hidden p-5 fade-in h-full hover:scale-105 transition-transform duration-300'>
         <Image
           src={image}
           width={800}

@@ -25,11 +25,13 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: var(--font-montserrat);
 }
 
-@keyframes appear{
+@keyframes appear {
   from {
     opacity: 0;
     transform: translateY(100px);
@@ -44,4 +46,16 @@ h1, h2, h3 {
   animation: appear linear;
   animation-timeline: view();
   animation-range: entry 0% cover 40%;
+}
+
+.scroll-shadow {
+  background-image: linear-gradient(to right, transparent, transparent),
+    linear-gradient(to right, transparent, transparent),
+    linear-gradient(to right, rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0)),
+    linear-gradient(to left, rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0));
+  background-position: left center, right center, left center, right center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-size: 20px 100%, 20px 100%, 10px 100%, 10px 100%;
+  background-attachment: local, local, scroll, scroll;
 }
