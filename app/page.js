@@ -105,7 +105,8 @@ export default function Home() {
         <p
           id='verse-text'
           className='text-xl md:text-3xl text-center text-gray-700 font-semibold'>
-          "Then you will know the truth, and the truth will set you free."
+          &quot;Then you will know the truth, and the truth will set you
+          free.&quot;
           <br /> - John 8:32
         </p>
       </div>
